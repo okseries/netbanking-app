@@ -1,4 +1,5 @@
 import axios from "axios";
+import { obtenerClienteSeleccionado } from "./clientes";
 
 export interface Producto {
     id:         number;
@@ -48,8 +49,13 @@ export interface Propietario {
 
 
 export const obtenerProductos = async () => {
+    const clienteSeleccionado = obtenerClienteSeleccionado();
+    
+    if (!clienteSeleccionado) {
+        throw new Error('No hay cliente seleccionado');
+    }
 
-    const {data} = await axios.get<Producto[]>(`http://localhost:5177/api/cuenta/cliente/2`);
+    const {data} = await axios.get<Producto[]>(`http://localhost:5177/api/cuenta/cliente/${clienteSeleccionado.id}`);
 
     return data;
 };
