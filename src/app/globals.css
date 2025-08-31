@@ -10,6 +10,7 @@ body {
   background-color: rgb(248, 250, 252);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 400;
+  font-size: 14px;
 }
 
 /* Smooth transitions */
@@ -28,18 +29,18 @@ body {
   animation: fadeIn 0.3s ease-out;
 }
 
-/* Minimal button styles */
+/* Compact button styles */
 .btn-primary {
-  @apply bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors;
+  @apply bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-lg text-sm font-medium transition-colors;
 }
 
 .btn-secondary {
-  @apply bg-white hover:bg-slate-50 text-slate-700 py-3 px-4 rounded-lg font-medium border border-slate-300 hover:border-slate-400 transition-colors;
+  @apply bg-white hover:bg-slate-50 text-slate-700 py-2 px-3 rounded-lg text-sm font-medium border border-slate-300 hover:border-slate-400 transition-colors;
 }
 
-/* Input styles */
+/* Compact input styles */
 .input-primary {
-  @apply w-full p-3 border border-slate-300 rounded-lg bg-white text-slate-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
+  @apply w-full p-3 text-sm border border-slate-300 rounded-lg bg-white text-slate-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors;
 }
 
 /* Card styles */
